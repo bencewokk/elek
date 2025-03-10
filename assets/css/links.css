@@ -1,0 +1,103 @@
+:root {
+    /* Add these new variables */
+    --color-link: #ff4444;        /* Bright red for links */
+    --color-link-hover: #ff0000;  /* Darker red for hover */
+    --color-link-visited: #cc3737;/* Visited link color */
+}
+
+/* Global link styles */
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--color-link-visited);
+}
+
+/* Header specific links */
+.site-header a {
+    color: var(--color-primary);
+}
+
+.site-header .nav-menu a {
+    color: var(--color-primary);
+}
+
+.site-header .nav-menu a:hover {
+    color: rgba(var(--color-primary), 0.8);
+}
+
+/* Article links */
+article a {
+    color: var(--color-link);
+    font-weight: 500;
+}
+
+article a:hover {
+    color: var(--color-link-hover);
+}
+
+/* Sidebar links */
+aside a {
+    color: var(--color-link);
+}
+
+aside a:hover {
+    color: var(--color-link-hover);
+}
+
+/* Footer links */
+footer a {
+    color: var(--color-primary);
+}
+
+footer a:hover {
+    color: rgba(var(--color-primary), 0.8);
+}
+
+/* Special link types */
+.post-meta a,
+.auth-links a {
+    color: var(--color-link);
+    text-decoration: underline;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-link);
+    color: var(--color-primary) !important;
+    border-radius: 4px;
+}
+
+.button-link:hover {
+    background-color: var(--color-link-hover);
+    text-decoration: none;
+}
+
+/* Heading links */
+h1 > a,
+h2 > a,
+h3 > a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+h1 > a:hover,
+h2 > a:hover,
+h3 > a:hover {
+    color: var(--color-link-hover);
+}
+
+/* Navigation active state */
+.current-menu-item > a {
+    color: var(--color-link-hover) !important;
+    font-weight: bold;
+}

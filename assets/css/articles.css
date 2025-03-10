@@ -1,0 +1,112 @@
+/* articles.css */
+/* Article Styles */
+article {
+    background-color: var(--color-primary);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Post Title */
+article h2 a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+article h2 a:hover {
+    color: var(--color-secondary);
+}
+
+/* Post Content */
+article .post-content {
+    margin-top: 1rem;
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+article .post-content p {
+    margin-bottom: 1.2rem;
+    color: var(--color-text);
+}
+
+/* Post Meta */
+article .post-meta {
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text);
+}
+
+article .post-meta time {
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+/* Links within posts */
+article a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+article a:hover {
+    color: var(--color-text);
+    text-decoration: underline;
+}
+
+/* Lists */
+article ul,
+article ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    color: var(--color-text);
+}
+
+article li {
+    margin-bottom: 0.5rem;
+}
+
+/* Blockquotes */
+article blockquote {
+    border-left: 3px solid var(--color-secondary);
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 0, 0, 0.03);
+    color: var(--color-text);
+}
+
+/* Code */
+article pre,
+article code {
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    padding: 0.2em 0.4em;
+    font-family: monospace;
+    color: var(--color-text);
+}
+
+/* Responsive Article Styles */
+@media (max-width: 768px) {
+    article {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    article h2 a {
+        font-size: 1.2rem;
+    }
+
+    article .post-content {
+        font-size: 0.95rem;
+    }
+
+    article blockquote {
+        padding: 0.8rem 1rem;
+    }
+}

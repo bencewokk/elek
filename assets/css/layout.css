@@ -1,0 +1,94 @@
+:root {
+    --color-primary: #ffffff;    /* White (main background and text) */
+    --color-secondary: #852d2d;  /* Red (accent color) */
+    --color-text: #1a1a1a;       /* Dark gray (text color) */
+    --color-background: #ffffff; /* White (background) */
+    --color-border: #e0e0e0;     /* Light gray (borders) */
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.content-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    width: 1200px;
+}
+
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: var(--color-primary);
+    padding: 1.5rem;
+    border-left: 2px solid var(--color-secondary);
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        margin-top: 0;
+        position: sticky;
+        top: 2rem;
+        height: fit-content;
+    }
+}
+
+/* Widget styling */
+.widget {
+    margin-bottom: 2rem;
+}
+
+.widget-title {
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+
+/* Grid layout for content */
+@media (min-width: 768px) {
+    body > main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 2rem;
+    }
+    
+    body > main > section {
+        order: 1;
+    }
+    
+    
+}
+
+/* Utilities */
+p {
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,108 @@
+/* Header Styles */
+.site-header {
+    background-color: var(--color-secondary);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    position: relative;
+}
+
+/* Branding container */
+.header-branding {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 1.5rem;
+    flex-shrink: 1; /* Allow shrinking */
+    min-width: 0; /* Fix overflow in flex */
+}
+
+/* Logo styling */
+.site-logo {
+    height: 80%;
+    max-height: 70px; /* Add max-height */
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+/* Site title */
+.site-title {
+    margin: 0;
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Auth container */
+.auth-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+    flex-shrink: 0; /* Prevent shrinking */
+    padding-left: 1rem; /* Add spacing */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 0 1rem;
+        height: 70px;
+    }
+    
+    .site-logo {
+        max-height: 50px;
+        max-width: 100px;
+    }
+    
+    .site-title {
+        font-size: 1.3rem;
+    }
+    
+    .auth-container {
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 0 0.5rem;
+    }
+    
+    .site-logo {
+        max-width: 80px;
+        max-height: 40px;
+    }
+    
+    .site-title {
+        font-size: 1.1rem;
+    }
+    
+    .auth-container {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+    }
+    
+    .login-link,
+    .register-link {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .site-title {
+        display: none;
+    }
+    
+    .site-logo {
+        max-width: 60px;
+    }
+}

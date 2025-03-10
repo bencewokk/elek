@@ -1,0 +1,33 @@
+/* Promotional Ad Styling */
+.promo-ad {
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ad-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.ad-image:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .promo-ad {
+        margin-bottom: 1.5rem;
+        border-radius: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-ad {
+        margin: 0 -1rem 1.5rem;
+        border-radius: 0;
+    }
+}
