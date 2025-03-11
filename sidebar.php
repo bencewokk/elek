@@ -34,3 +34,13 @@
         </div>
     <?php endif; ?>
 </aside>
+
+<script>
+jQuery(document).ready(function($) {
+    $('.match-item').hover(function() {
+        $(this).find('.match-popup').show();
+    }, function() {
+        $(this).find('.match-popup').hide();
+    });
+});
+</script>

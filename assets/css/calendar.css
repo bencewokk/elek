@@ -29,28 +29,68 @@
     background: #005177;
   }
 
-/* Style team logos in calendar */
-#wp-calendar .team-logo {
-    margin: 2px auto;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* Calendar styling for matches */
+.calendar-day-has-match {
+  background-color: #f5f5f5;
+  position: relative;
 }
 
-/* Highlight match days */
-#wp-calendar td.has-match {
-    background: #f8f9fa;
-    position: relative;
+.match-item {
+  position: relative;
 }
 
-#wp-calendar td.has-match::after {
-    content: "";
-    display: block;
-    width: 6px;
-    height: 6px;
-    background: #ff4757;
-    border-radius: 50%;
-    position: absolute;
-    top: 3px;
-    right: 3px;
+.match-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  overflow: hidden;
+}
+
+.half-logo {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.half-logo.team-a img {
+  object-fit: cover;
+  object-position: right;
+  width: 200%;
+  height: 100%;
+}
+
+.half-logo.team-b img {
+  object-fit: cover;
+  object-position: left;
+  width: 200%;
+  height: 100%;
+}
+
+.match-popup {
+  display: none;
+  position: absolute;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.match-item:hover .match-popup {
+  display: block;
+}
+
+.has-match {
+  color: #fff;
+  background-color: #0073aa;
+  border-radius: 50%;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
 }
