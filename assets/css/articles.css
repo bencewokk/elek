@@ -1,15 +1,37 @@
 /* articles.css */
-/* Article Styles */
+
+/* Dynamic Two-Column Layout using masonry-like approach */
+.two-column-grid {
+    column-count: 2;
+    column-gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Article Styles - Natural height */
 article {
     background-color: var(--color-primary);
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
     border-radius: 5px;
     border: 1px solid var(--color-border);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    break-inside: avoid; /* Prevent articles from breaking across columns */
+    display: inline-block; /* Required for proper column flow */
+    width: 100%; /* Make sure it takes full width of the column */
+    margin-bottom: 1.5rem; /* Spacing between articles */
+}
+
+/* Hover effect for a subtle lift */
+article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Post Title */
+article h2 {
+    margin-top: 0; /* Remove top margin to keep it compact */
+}
+
 article h2 a {
     color: var(--color-text);
     text-decoration: none;
@@ -33,6 +55,10 @@ article .post-content p {
     color: var(--color-text);
 }
 
+article .post-content p:last-child {
+    margin-bottom: 0; /* Remove bottom margin from last paragraph for compact layout */
+}
+
 /* Post Meta */
 article .post-meta {
     font-size: 0.875rem;
@@ -47,66 +73,38 @@ article .post-meta time {
     font-weight: 500;
 }
 
-/* Links within posts */
-article a {
-    color: var(--color-secondary);
-    text-decoration: none;
-    transition: all 0.3s ease;
+/* Promo Ad Styles */
+.promo-ad {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    column-span: all; /* Make promo ad span all columns */
+    display: block;
 }
 
-article a:hover {
-    color: var(--color-text);
-    text-decoration: underline;
+.promo-ad img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Post Thumbnail */
+.post-thumbnail {
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    overflow: hidden;
 }
 
-/* Lists */
-article ul,
-article ol {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-    color: var(--color-text);
+.post-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-article li {
-    margin-bottom: 0.5rem;
+.post-thumbnail:hover img {
+    transform: scale(1.05);
 }
 
-/* Blockquotes */
-article blockquote {
-    border-left: 3px solid var(--color-secondary);
-    margin: 1.5rem 0;
-    padding: 1rem 1.5rem;
-    background-color: rgba(255, 0, 0, 0.03);
-    color: var(--color-text);
-}
-
-/* Code */
-article pre,
-article code {
-    background-color: var(--color-background);
-    border: 1px solid var(--color-border);
-    border-radius: 3px;
-    padding: 0.2em 0.4em;
-    font-family: monospace;
-    color: var(--color-text);
-}
-
-/* Responsive Article Styles */
-@media (max-width: 768px) {
-    article {
-        padding: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    article h2 a {
-        font-size: 1.2rem;
-    }
-
-    article .post-content {
-        font-size: 0.95rem;
-    }
-
-    article blockquote {
-        padding: 0.8rem 1rem;
-    }
+/* Adjust article padding when it has a thumbnail */
+article.post-card .post-thumbnail + .post-title {
+    margin-top: 0.5rem;
 }

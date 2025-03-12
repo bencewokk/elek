@@ -1,0 +1,386 @@
+/* Modern Comments Section Styles */
+.comments-section {
+    background: linear-gradient(to bottom, #ffffff, #f7f9fc);
+    padding: 30px;
+    margin: 40px auto;
+    max-width: 1200px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.comments-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--color-text);
+    border-bottom: none;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.comments-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--color-secondary);
+    border-radius: 2px;
+}
+
+/* Comment List */
+.comment-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Thread container */
+.comment-thread {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+/* Root comment */
+.comment-root {
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.comment-root:hover {
+    background-color: #f8faff;
+}
+
+/* Individual Comment */
+.comment {
+    padding: 16px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: background-color 0.2s ease;
+    position: relative;
+}
+
+.comment:hover {
+    background-color: #f8faff;
+}
+
+/* Comment Author & Meta */
+.comment-author {
+    font-weight: 700;
+    color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+}
+
+.comment-author::before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    background-color: var(--color-secondary);
+    opacity: 0.2;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+
+.comment-meta {
+    font-size: 0.875rem;
+    color: #8a94a6;
+    margin: 8px 0 15px 44px;
+    display: flex;
+    align-items: center;
+}
+
+.comment-meta::before {
+    content: "•";
+    font-size: 1.2rem;
+    margin-right: 8px;
+    opacity: 0.5;
+}
+
+/* Comment Content */
+.comment-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+    padding-left: 44px;
+}
+
+/* Comment Actions */
+.comment-actions {
+    display: flex;
+    margin-top: 15px;
+    padding-left: 44px;
+}
+
+/* Reply Link Styling */
+.comment-reply-link {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.comment-reply-link::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: contain;
+    transition: transform 0.3s ease;
+}
+
+.comment-reply-link:hover {
+    color: var(--color-primary);
+}
+
+.comment-reply-link:hover::before {
+    transform: translateX(3px);
+}
+
+/* Like Button */
+.comment-like {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #8a94a6;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.comment-like::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'/%3E%3C/svg%3E");
+    background-position: center;
+    background-size: contain;
+    transition: transform 0.3s ease;
+}
+
+.comment-like:hover {
+    color: #e74c3c;
+}
+
+.comment-like:hover::before {
+    transform: scale(1.2);
+}
+
+/* Comment form */
+.comment-form {
+    margin-top: 40px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.comment-form-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e1e5ee;
+    border-radius: 8px;
+    resize: vertical;
+    min-height: 120px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comment-form textarea:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(var(--color-secondary-rgb), 0.1);
+}
+
+.comment-form-submit {
+    margin-top: 15px;
+    padding: 12px 24px;
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.comment-form-submit:hover {
+    background-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+/* IMPROVED COMMENT CHAINS */
+/* Nested comments container */
+.comment-replies {
+    position: relative;
+    margin-top: 10px;
+    padding-left: 25px;
+}
+
+/* Thread connection line */
+.comment-replies::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 12px;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--color-secondary);
+    opacity: 0.2;
+    border-radius: 1px;
+}
+
+/* Thread level indicators */
+.comment-level-1 {
+    margin-left: 25px;
+    border-left: 3px solid rgba(var(--color-secondary-rgb, 100, 150, 200), 0.5);
+}
+
+.comment-level-2 {
+    margin-left: 25px;
+    border-left: 3px solid rgba(var(--color-primary-rgb, 80, 130, 190), 0.5);
+}
+
+.comment-level-3 {
+    margin-left: 25px;
+    border-left: 3px solid rgba(var(--color-accent-rgb, 60, 110, 180), 0.5);
+}
+
+.comment-level-4 {
+    margin-left: 25px;
+    border-left: 3px solid rgba(var(--color-highlight-rgb, 40, 90, 170), 0.5);
+}
+
+.comment-level-5 {
+    margin-left: 25px;
+    border-left: 3px solid rgba(var(--color-muted-rgb, 20, 70, 160), 0.5);
+}
+
+/* Reply depth styling */
+.reply {
+    position: relative;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+/* Thread connector */
+.reply::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -25px;
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-secondary);
+    opacity: 0.2;
+}
+
+/* Highlight the active comment chain */
+.comment-chain-active .reply {
+    background-color: #f8faff;
+}
+
+.comment-chain-active > .reply {
+    border-left: 3px solid var(--color-secondary);
+}
+
+/* Color-coded user badges */
+.user-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    margin-left: 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.user-badge-op {
+    background-color: rgba(var(--color-secondary-rgb), 0.15);
+    color: var(--color-secondary);
+}
+
+.user-badge-mod {
+    background-color: rgba(46, 204, 113, 0.15);
+    color: #2ecc71;
+}
+
+/* Collapse/Expand functionality */
+.comment-collapse {
+    position: absolute;
+    left: -10px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: #f0f3f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    transition: background-color 0.2s ease;
+}
+
+.comment-collapse::after {
+    content: "-";
+    font-size: 16px;
+    font-weight: bold;
+    color: #8a94a6;
+}
+
+.comment-collapse:hover {
+    background-color: #e1e5ee;
+}
+
+.comment-collapsed .comment-collapse::after {
+    content: "+";
+}
+
+.comment-collapsed .comment-content,
+.comment-collapsed .comment-actions,
+.comment-collapsed .comment-replies {
+    display: none;
+}
+
+.comment-collapsed {
+    padding-bottom: 10px;
+    opacity: 0.7;
+}
+
+/* Thread information */
+.thread-info {
+    font-size: 0.75rem;
+    color: #8a94a6;
+    margin-left: 5px;
+}

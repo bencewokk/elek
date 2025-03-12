@@ -1,13 +1,24 @@
 /* Header Styles */
+/* Centered Header */
+/* Full-width background */
 .site-header {
     background-color: var(--color-secondary);
     padding: 0 2rem;
+    height: 80px;
+    position: relative;
+    width: 100%;
+}
+
+/* Centered Header Content */
+.site-header .header-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
-    position: relative;
+    height: 100%;
 }
+
 
 /* Branding container */
 .header-branding {
@@ -47,6 +58,13 @@
     height: 100%;
     flex-shrink: 0; /* Prevent shrinking */
     padding-left: 1rem; /* Add spacing */
+}
+
+.user-name {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    font-weight: bold;
+    margin-right: 1rem;
 }
 
 /* Responsive design */

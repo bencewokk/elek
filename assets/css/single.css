@@ -1,0 +1,88 @@
+/* Single Post Page Styles */
+.main-content {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+.content-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.single-post {
+    width: 70%;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.post-title {
+    font-size: 2.5em;
+    margin: 0;
+    padding-bottom: 10px;
+    color: #333;
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.post-meta time {
+    margin-right: 10px;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.post-content {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Sidebar (if applicable) */
+.sidebar {
+    width: 28%;
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Comments Section */
+.comments-section {
+    background: #fff;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 1200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comments-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .content-grid {
+        flex-direction: column;
+    }
+    .single-post, .sidebar {
+        width: 100%;
+    }
+}

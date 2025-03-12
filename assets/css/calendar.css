@@ -1,37 +1,39 @@
+
 /* Style the calendar table */
 #wp-calendar {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 10px 0;
-  }
-  
-  #wp-calendar caption {
-    font-weight: bold;
-    padding: 10px;
-    background: #f5f5f5;
-  }
-  
-  #wp-calendar th,
-  #wp-calendar td {
-    text-align: center;
-    padding: 5px;
-    border: 1px solid #ddd;
-  }
-  
-  #wp-calendar td a {
-    display: block;
-    background: #0073aa;
-    color: white;
-    border-radius: 3px;
-  }
-  
-  #wp-calendar td a:hover {
-    background: #005177;
-  }
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  color: var(--color-text);
+}
+
+#wp-calendar caption {
+  font-weight: bold;
+  padding: 10px;
+  background: var(--color-background);
+}
+
+#wp-calendar th,
+#wp-calendar td {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid var(--color-border);
+}
+
+#wp-calendar td a {
+  display: block;
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  border-radius: 3px;
+}
+
+#wp-calendar td a:hover {
+  background: var(--color-secondary); /* Ideally, this would be a darker variant */
+}
 
 /* Calendar styling for matches */
 .calendar-day-has-match {
-  background-color: #f5f5f5;
+  background-color: var(--color-background);
   position: relative;
 }
 
@@ -70,8 +72,8 @@
 .match-popup {
   display: none;
   position: absolute;
-  background: white;
-  border: 1px solid #ddd;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
   padding: 10px;
   width: 200px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -85,8 +87,8 @@
 }
 
 .has-match {
-  color: #fff;
-  background-color: #0073aa;
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
   border-radius: 50%;
   display: inline-block;
   width: 24px;

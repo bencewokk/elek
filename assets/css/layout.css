@@ -1,6 +1,6 @@
 :root {
     --color-primary: #ffffff;    /* White (main background and text) */
-    --color-secondary: #852d2d;  /* Red (accent color) */
+    --color-secondary: #CC0000;  /* Red (accent color) */
     --color-text: #1a1a1a;       /* Dark gray (text color) */
     --color-background: #ffffff; /* White (background) */
     --color-border: #e0e0e0;     /* Light gray (borders) */
@@ -68,7 +68,6 @@ body {
 main {
     max-width: 1200px;
     margin: 2rem auto;
-    padding: 0 1rem;
     width: 100%;
 }
 
